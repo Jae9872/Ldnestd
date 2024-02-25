@@ -313,7 +313,7 @@
 
 
 
-   <div class="page-component__bg_image_box bg-white-color first_component" id="header-39-346211">
+  <div class="page-component__bg_image_box bg-white-color first_component" id="header-39-346211">
     <video width="100%" height="auto" autoplay muted loop class="js-parse-mncpkpjgigpklafbenkddfcgalikldde">
         <source src="vid.mp4" type="video/mp4" class="js-parse-mncpkpjgigpklafbenkddfcgalikldde">
         Your browser does not support the video tag.
@@ -323,42 +323,52 @@
 </div>
 
 <style>
-    .page-component__bg_image_box {
-        position: relative;
-    }
+ .page-component__bg_image_box {
+    position: relative;
+}
 
-    .covering-image {
-        position: absolute;
-        top: 0;
-        left: -100%; /* Initial position off the screen */
-        width: 100%;
-        height: auto;
-        z-index: 1; /* Ensure the image is on top of the video */
-        animation: slideIn 1s forwards; /* Animation definition */
-    }
+.covering-image {
+    position: absolute;
+    top: 0;
+    left: -100%; /* Initial position off the screen */
+    width: 100%;
+    height: auto;
+    z-index: 1; /* Ensure the image is on top of the video */
+    transition: left 0.5s ease; /* Transition for smooth sliding */
+}
 
-    @keyframes slideIn {
-        0% {
-            left: -100%; /* Start off the screen */
-        }
-        100% {
-            left: 0; /* End position, fully visible */
-        }
-    }
-    .video-container {
-        position: relative;
-        width: 100%;
-        height: 100vh; /* Set the height to full viewport height */
-        overflow: hidden;
-    }
+.show {
+    left: 0; /* Position fully visible */
+}
 
-    .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Set the height to full viewport height */
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+<script>
+window.addEventListener('scroll', function() {
+    var coveringImage = document.querySelector('.covering-image');
+    var videoContainer = document.querySelector('.video-container');
+    var distanceFromTop = videoContainer.getBoundingClientRect().top;
+    
+    // Check if the video container is in the viewport
+    if (distanceFromTop >= 0 && distanceFromTop <= window.innerHeight) {
+        coveringImage.classList.add('show'); // Slide in the image
+    } else {
+        coveringImage.classList.remove('show'); // Slide out the image
     }
+});
+</script>
 </style>
 
 
