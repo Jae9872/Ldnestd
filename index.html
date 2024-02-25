@@ -313,37 +313,36 @@
 
 
 
-  <div class="page-component__bg_image_box bg-white-color first_component" id="header-39-346211">
-    <img src="pic.svg" alt="Covering Image" class="covering-image">
-    <video width="100%" height="auto" autoplay muted loop class="js-parse-mncpkpjgigpklafbenkddfcgalikldde">
-        <source src="vid.mp4" type="video/mp4" class="js-parse-mncpkpjgigpklafbenkddfcgalikldde">
-        Your browser does not support the video tag.
-    </video>
-</div>
+    <div class="page-component__bg_image_box    bg-white-color  first_component  " id="header-39-346211">
+
+
+
+
+
+  
+   
+       
+   <video width="100%" height="auto" autoplay muted loop>
+  <source src="vid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 <!-- CSS styles -->
 <style>
-    .page-component__bg_image_box {
+    .video-container {
         position: relative;
-    }
-
-    .covering-image {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1; /* Ensure the image is on top of the video */
+        height: 100vh; /* Set the height to full viewport height */
+        overflow: hidden;
     }
 
-    .page-component__bg_image_box video {
+    .video-container video {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: auto;
-        z-index: 0; /* Ensure the video is behind the image */
     }
 </style>
 
