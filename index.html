@@ -880,18 +880,7 @@
 
     <script>
 
-window.addEventListener('scroll', function() {
-    var coveringImage = document.querySelector('.covering-image');
-    var videoContainer = document.querySelector('.video-container');
-    var distanceFromTop = videoContainer.getBoundingClientRect().top;
-    
-    // Check if the video container is in the viewport
-    if (distanceFromTop >= 0 && distanceFromTop <= window.innerHeight) {
-        coveringImage.classList.add('show'); // Slide in the image
-    } else {
-        coveringImage.classList.remove('show'); // Slide out the image
-    }
-});
+
 
         (function() {
 document.getElementById('posts-05-776251').querySelectorAll('img').forEach((img) => {
@@ -4173,4 +4162,17 @@ document.getElementById('pricing-01-851751').querySelectorAll('img').forEach((im
 
 
 
-<div id="__vcbe" data-live="true"><template shadowrootmode="closed"><style>@import "chrome-extension://miinnegdklndgaidbnmkmdnjohhdcgjb/content.css";</style><!----></template></div></body></html>
+<div id="__vcbe" data-live="true"><template shadowrootmode="closed"><style>@import "chrome-extension://miinnegdklndgaidbnmkmdnjohhdcgjb/content.css";</style><!----></template></div><script>
+window.addEventListener('scroll', function() {
+    var coveringImage = document.querySelector('.covering-image');
+    var videoContainer = document.querySelector('.video-container');
+    var distanceFromTop = videoContainer.getBoundingClientRect().top;
+    
+    // Check if the video container is in the viewport
+    if (distanceFromTop >= 0 && distanceFromTop <= window.innerHeight) {
+        coveringImage.classList.add('show'); // Slide in the image
+    } else {
+        coveringImage.classList.remove('show'); // Slide out the image
+    }
+});
+</script></body></html>
