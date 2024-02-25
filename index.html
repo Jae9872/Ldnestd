@@ -335,7 +335,14 @@
     z-index: 1; /* Ensure the image is on top of the video */
     transition: left 0.5s ease; /* Transition for smooth sliding */
 }
-
+    @keyframes slideIn {
+        0% {
+            left: -100%; /* Start off the screen */
+        }
+        100% {
+            left: 0; /* End position, fully visible */
+        }
+    }
 .show {
     left: 0; /* Position fully visible */
 }
