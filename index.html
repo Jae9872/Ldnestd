@@ -2951,9 +2951,7 @@ document.getElementById('pricing-01-851751').querySelectorAll('img').forEach((im
     
 
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    
 
 <div id="contactContainer" bis_skin_checked="1"><div style="position: relative;" bis_skin_checked="1">
         <div class="occlusion-wrapper" style="width: 750px; height: 572px;" bis_skin_checked="1">
@@ -3068,7 +3066,8 @@ document.getElementById('pricing-01-851751').querySelectorAll('img').forEach((im
 </div>
 
 
-<script>document.getElementById('contactForm').addEventListener('submit', function(event) {
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
     var formData = new FormData(this);
@@ -3091,7 +3090,10 @@ document.getElementById('pricing-01-851751').querySelectorAll('img').forEach((im
     });
 });
 
+// Hide the thank you container initially
+document.getElementById('thankYouContainer').style.display = 'none';
 </script>
+
 
 
 
