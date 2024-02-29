@@ -2954,7 +2954,19 @@ document.getElementById('pricing-01-851751').querySelectorAll('img').forEach((im
     
 
 <div id="contactContainer" bis_skin_checked="1"><div style="position: relative;" bis_skin_checked="1">
-        <div class="occlusion-wrapper" style="width: 750px; height: 572px;" bis_skin_checked="1">
+     <style>
+    .occlusion-wrapper {
+        max-width: 100%; /* Ensure it doesn't exceed the width of the viewport */
+        height: auto; /* Let the height adjust according to the content */
+    }
+
+    @media (max-width: 768px) { /* Adjust for smaller devices */
+        .occlusion-wrapper {
+            width: 100%; /* Make it take up the full width of the viewport */
+            height: auto; /* Let the height adjust according to the content */
+        }
+    }
+</style>   <div class="occlusion-wrapper" style="width: 750px; height: 572px;" bis_skin_checked="1">
             <div class="formWrapper--MRFMn66" bis_skin_checked="1">
                 <form id="contactForm" class="form--ZVmsJzT" style="border-radius: 15px; box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgba(0, 0, 0, 0.25) 0px 4px 4px; max-height: 872px;">
                     <div class="baseCardViewWrapper--SxlBvmq" bis_skin_checked="1">
